@@ -1,5 +1,5 @@
 class BotResponsesController < ApplicationController
   def show
-    @message = "Hello, how are you today?"
+    @response = BotResponse.all[0].description
   end
 end

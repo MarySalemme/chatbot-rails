@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe BotResponse, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { is_expected.to be }
+
+  describe BotResponse.new(description: "In a galaxy far away") do
+    it { is_expected.to have_attributes(:description => "In a galaxy far away") }
+  end
 end
