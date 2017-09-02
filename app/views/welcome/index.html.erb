@@ -1,5 +1,5 @@
 <h1>Welcome</h1>
 <div id="first-message">
   <p>Hi Chatbot, I want to play a game!</p>
-  <button type="button" name="send">Send</button>
+  <%= link_to "<button>Send</button>".html_safe, bot_response_url, :id => "button_id" %>
 </div>
