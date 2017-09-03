@@ -7,7 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 BotResponse.create(description: "SWEET MOTHER OF GOD! There's a cockroach in your house!
-
-I don't know what vengeful deity you've offended to deserve this fate, but now you have to deal with it!
-
-WHAT WILL YOU DO?")
+                                I don't know what vengeful deity you've offended to deserve this fate, but now you have to deal with it!
+                                WHAT WILL YOU DO?")
