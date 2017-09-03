@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :bot_responses
   get 'welcome/index'
   root 'welcome#index'
 
