@@ -9,6 +9,20 @@
 BotResponse.create(description: "SWEET MOTHER OF GOD! There's a cockroach in your house!
                                 I don't know what vengeful deity you've offended to deserve this fate, but now you have to deal with it!
                                 WHAT WILL YOU DO?")
+BotResponse.create(description: "Alright, let's get down to business. Time to prove to the world that you can totally kill a cockroach and be a big strong man about it.
 
-Choice.create(description: "Invite your neighbor over, then have him kill it.", bot_response_id: 1)
-Choice.create(description: "Move out of your house.", bot_response_id: 1)
+Now you just need to figure out the best way to do it.
+
+WHAT WILL YOU DO?")
+BotResponse.create(description: "Okay, wow, that's really how you want to deal with your problems? Just run away from them?
+
+Well, fine, alright, gather your things and leave, I guess.
+
+There was some other awesome stuff to do in this adventure... twists, turns, a laser cannon... but whatever, you know? Just do your thing. Don't worry about me.
+
+Seriously, it's fine.
+
+THE END")
+
+Choice.create(description: "Muster your courage and kill it yourself", parent_bot_response_id: 1, next_bot_response_id: 2)
+Choice.create(description: "Move out of your house", parent_bot_response_id: 1, next_bot_response_id: 3)
