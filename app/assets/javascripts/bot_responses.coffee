@@ -2,7 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 # <script type="text/javascript">
-#   setTimeout(function() {
-#     $('response');
-#   }, 1000);
+#   response = document.getElementById('response')
+#   function append() {
+#     $('responses').appendChild(response);
+#   }
+#
+#   setTimeout(append, 2000);
 # </script>
