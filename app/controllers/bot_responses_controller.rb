@@ -4,7 +4,6 @@ class BotResponsesController < ApplicationController
     @related_choices = Choice.where(parent_bot_response_id: @bot_response.id)
   end
 
-
   private
 
   def bot_response_params
