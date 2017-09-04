@@ -2,7 +2,8 @@
 <div class="responses">
   <p class="response"><%= @bot_response.description %></P>
 </div>
-<select>
-  <option value="choice_one"><%= @related_choices[0] %></option>
-  <option value="choice_two"><%= @related_choices[1] %></option>
-</select>
+
+<% @related_choices.each do |choice|  %>
+  <%= choice.description %>
+  <%= link_to "Choose", bot_response_url(id: choice.next_bot_response_id) %><br>
+<% end %>
