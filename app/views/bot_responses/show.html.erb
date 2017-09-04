@@ -1,2 +1,11 @@
 <h1>There's a cockroach in your house!</h1>
-<p class="response"><%= @response %></p>
+<p class="response"><%= @bot_response.description %></p>
+<select>
+  <% @choices.each do |choice| %>
+  <% if choice.bot_response_id === @bot_response.id %>
+  <option value="choice"><%= choice.description %></option>
+  <% else %>
+  Replay
+  <% end %>
+  <% end %>
+</select>

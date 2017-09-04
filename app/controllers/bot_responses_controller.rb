@@ -1,5 +1,6 @@
 class BotResponsesController < ApplicationController
   def show
-    @response = BotResponse.all[0].description
+    @bot_response = BotResponse.all[0]
+    @choices = Choice.all
   end
 end

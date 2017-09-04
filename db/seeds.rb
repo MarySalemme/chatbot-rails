@@ -9,3 +9,6 @@
 BotResponse.create(description: "SWEET MOTHER OF GOD! There's a cockroach in your house!
                                 I don't know what vengeful deity you've offended to deserve this fate, but now you have to deal with it!
                                 WHAT WILL YOU DO?")
+
+Choice.create(description: "Invite your neighbor over, then have him kill it.", bot_response_id: 1)
+Choice.create(description: "Move out of your house.", bot_response_id: 1)
