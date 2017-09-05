@@ -1,20 +1,21 @@
 <h1>There's a cockroach in your house!</h1>
-<div class="responses">
-  <p class="response"><%= @bot_response.description %></P>
+<div id="responses">
+  <p id="response"><%= @bot_response.description %></p>
 </div>
 
 <% if @related_choices.empty? && @bot_response.victory == true %>
-  <div>
-    YOU WON!
+  <div id="pass">
+    YOU WIN!
   </div>
-  <%= link_to "<button>Replay?</button>".html_safe, bot_response_url(id: 1) %>
+  <%= link_to "Replay?".html_safe, bot_response_url(id: 1) %>
 <% elsif @related_choices.empty? && @bot_response.victory == false %>
-  <div>
+  <div id="fail">
     YOU LOSE!
   </div>
 <% else %>
-  <% @related_choices.each do |choice|  %>
-    <%= choice.description %>
-    <%= link_to "Choose", bot_response_url(id: choice.next_bot_response_id) %><br>
-  <% end %>
+  <div id="choices">
+    <% @related_choices.each do |choice|  %>
+      <%= link_to choice.description, bot_response_url(id: choice.next_bot_response_id) %><br>
+    <% end %>
+  </div>
 <% end %>

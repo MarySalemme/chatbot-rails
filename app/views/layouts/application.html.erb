@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>ChatbotRails</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +17,7 @@
         <%= link_to "Sign up", new_user_registration_path %>
       <% end %>
     </div>
-    
+
     <%= yield %>
   </body>
 </html>
