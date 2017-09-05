@@ -3,11 +3,15 @@
   <p class="response"><%= @bot_response.description %></P>
 </div>
 
-<% if @related_choices.empty? %>
+<% if @related_choices.empty? && @bot_response.victory == true %>
   <div>
-    THE END!
+    YOU WON!
   </div>
   <%= link_to "<button>Replay?</button>".html_safe, bot_response_url(id: 1) %>
+<% elsif @related_choices.empty? && @bot_response.victory == false %>
+  <div>
+    YOU LOSE!
+  </div>
 <% else %>
   <% @related_choices.each do |choice|  %>
     <%= choice.description %>

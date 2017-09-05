@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20170904143610) do
 
   create_table "bot_responses", force: :cascade do |t|
     t.string "description"
+    t.boolean "victory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "choices", force: :cascade do |t|
     t.string "description"
-    t.integer "related_bot_response_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "parent_bot_response_id"
