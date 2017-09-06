@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 feature "User can play the game" do
   context "user in the root of the game" do
@@ -9,6 +9,7 @@ feature "User can play the game" do
       bot_response = BotResponse.find(1)
       visit "/bot_response?id=#{bot_response.id}"
       expect(page).to have_content "choose me"
+      expect(page).not_to have_link("Replay")
     end
   end
 end

@@ -7,6 +7,7 @@ feature "User can start playing" do
       visit('/')
       expect(page).to have_content('Hi Chatbot')
       expect(page).to have_link('Start game')
+      expect(page).not_to have_link('Replay')
     end
   end
 end
