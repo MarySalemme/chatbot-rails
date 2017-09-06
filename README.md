@@ -58,3 +58,6 @@ As an admin
 So that nobody can modify the game after I've done
 I want to be able to sign out of my account
 ```
+
+- Game model to allow the admin to see the full tree
+- Create, edit and delete a bot response

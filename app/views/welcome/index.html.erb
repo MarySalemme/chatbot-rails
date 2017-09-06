@@ -1,4 +1,10 @@
 <h1>Welcome</h1>
+<div id="admin">
+  <% if user_signed_in? %>
+    <%= link_to "Admin area", game_url(id: @game.id) %>
+  <% end %>
+</div>
+
 <div id="first-message">
   <p>Hi Chatbot, I want to play a game!</p>
   <%= link_to "Start game", bot_response_url(id: @bot_response.id) %>
