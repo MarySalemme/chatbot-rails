@@ -1,0 +1,29 @@
+<h1>View current game flow</h1>
+<div class="game-flow">
+  <div>
+    <% @game.bot_responses.each do |response| %>
+      <% @game.choices.each do |choice| %>
+        <% if choice.next_bot_response_id == response.id %>
+          <% choices = [] %>
+          <% choices << choice %>
+          <% choices.each do |related_choice| %>
+            <%= choice.description %><br>
+          <% end %>
+        <% end %>
+      <% end %><br>
+
+      <%= response.description %><br><br>
+
+      <% @game.choices.each do |choice| %>
+        <% if choice.parent_bot_response_id == response.id %>
+          <% choices = [] %>
+          <% choices << choice %>
+          <% choices.each do |related_choice| %>
+            <%= choice.description %><br>
+          <% end %>
+        <% end %>
+      <% end %>
+      <hr>
+    <% end %>
+  </div>
+</div>
