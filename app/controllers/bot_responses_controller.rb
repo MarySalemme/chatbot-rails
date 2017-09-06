@@ -1,6 +1,7 @@
 class BotResponsesController < ApplicationController
   def show
     @bot_response = BotResponse.find(bot_response_params[:id])
+    @game = Game.find(@bot_response.game_id)
     @related_choices = Choice.where(parent_bot_response_id: @bot_response.id)
   end
 

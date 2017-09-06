@@ -1,7 +1,7 @@
 <h1>Welcome</h1>
 <div id="admin">
   <% if user_signed_in? %>
-    <%= link_to "Admin area", game_url(id: @game.id) %>
+    <%= link_to "View game flow", game_url(id: @game.id) %>
   <% end %>
 </div>
 
