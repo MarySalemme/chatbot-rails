@@ -2,7 +2,16 @@
 
 A simplified chat bot with pre-written messages and admin editor interface
 
-**User stories**
+## Installation
+
+- Install Rails and PostgreSQL
+- Run ``git clone https://github.com/MarySalemme/chatbot-rails.git``
+- Run ``bundle install`` to install the required dependencies
+- Run ``bin/rails db:seed`` to load the existing database
+- Run ``bin/rails s`` to start the server
+- Visit [http://localhost:3000](http://localhost:3000)
+
+## Features
 ```
 As a user
 So that I can play a game
@@ -40,8 +49,15 @@ I want to be able to sign into my admin account
 
 As an admin
 So that I can change the game
-I want to be able to view a messages
+I want to be able to view the game flow
 
+As an admin
+So that nobody can modify the game after I've done
+I want to be able to sign out of my account
+```
+
+#### Yet to implement
+```
 As an admin
 So that I can change the game
 I want to be able to edit a messages
@@ -53,11 +69,12 @@ I want to be able to add a message
 As an admin
 So that I can decide when the game is over
 I want to mark a message as the end of the game
-
-As an admin
-So that nobody can modify the game after I've done
-I want to be able to sign out of my account
 ```
 
-- Game model to allow the admin to see the full tree
-- Create, edit and delete a bot response
+**Further steps**
+- More feature tests
+- Improve game flow view to make it 'tree-like'
+- Refactoring
+- Use setTimeout to delay bot response
+- Use Typed.js library to show bot response as being typed
+- Create stats dashboard
