@@ -3,7 +3,8 @@ require 'rails_helper'
 feature "User can sign in and out" do
 
   before(:each) do
-    BotResponse.create(description: "test", victory: false)
+    game = Game.create(title: "Title")
+    response= BotResponse.create(description: "test", victory: false, game_id: game.id)
   end
 
   context "user not signed in and on the homepage" do

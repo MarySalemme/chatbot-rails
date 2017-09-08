@@ -4,12 +4,12 @@
   <p id="response"><%= @bot_response.description %></p>
 </div>
 
-<% if @related_choices.empty? && @bot_response.victory == true %>
+<% if @related_choices.empty? && @bot_response.victory %>
   <div id="pass">
     YOU WIN!
   </div>
   <%= link_to "Replay?".html_safe, bot_response_url(id: 1) %>
-<% elsif @related_choices.empty? && @bot_response.victory == false %>
+<% elsif @related_choices.empty? && !@bot_response.victory %>
   <div id="fail">
     YOU LOSE!
   </div>
